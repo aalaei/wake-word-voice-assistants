@@ -1257,8 +1257,8 @@ script:
       - lambda: |
           id(check_if_timers_active).execute();
           if (id(global_is_timer_active)){
-            id(main_display).filled_rectangle(100 , 40 , 160 , 50 , Color::WHITE );
-            id(main_display).rectangle(100 , 40 , 160 , 50 , Color::BLACK );
+            id(main_display).filled_rectangle(102 , 40 , 160 , 50 , Color::WHITE );
+            id(main_display).rectangle(102 , 40 , 160 , 50 , Color::BLACK );
 
             id(fetch_first_active_timer).execute();
             int hours_left = floor(id(global_first_active_timer).seconds_left / 3600);
@@ -1274,7 +1274,7 @@ script:
             } else {
               display_string = display_minute + ":" + display_seconds;
             }
-            id(main_display).printf(120, 47, id(font_timer), Color::BLACK, "%s", display_string.c_str());
+            id(main_display).printf(145, 47, id(font_timer), Color::BLACK, "%s", display_string.c_str());
           }
 
   - id: start_voice_assistant
